@@ -1,1 +1,1 @@
-Learning aboult file permissions in Linux
+Learning about file permissions in Linux
