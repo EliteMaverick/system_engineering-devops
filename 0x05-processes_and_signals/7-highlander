@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 # This script displays "To infinity and beyond" indefinitely and handles SIGTERM
 
-handle_term() {
-    echo "I am invincible!!!"
-}
-
-trap handle_term SIGTERM
+trap 'printf "%s\n" "I am invincible!!!"' SIGTERM
 
 while true
 do
