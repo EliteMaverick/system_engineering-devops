@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 # This script displays "To infinity and beyond" indefinitely and handles SIGTERM
 
-trap 'printf "%s\n" "I am invincible!!!"' SIGTERM
+trap_function() {
+    echo "I am invincible!!!"
+}
 
-while true
+trap trap_function SIGTERM SIGINT
+
+while :
 do
   echo "To infinity and beyond"
   sleep 2
